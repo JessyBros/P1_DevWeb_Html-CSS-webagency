@@ -1,0 +1,379 @@
+/* NE FONCTIONNE PAS POUR L'INSTANT!!!!*/
+
+@font-face {
+    font-family: 'fontawesome';
+    src: url('../fonts/fontawesome-webfont.eot');
+    src: url('../fonts/fontawesome-webfont.woff') format('woff'),
+         url('../fonts/fontawesome-webfont.ttf') format('truetype'),
+         url('../fonts/fontawesome-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+html, body{
+    margin: 0 0 0 0;
+    width:100%;
+    height:100%;
+    font-family:'fontawesome';
+    font-size: 20px;
+}
+
+/* Format des différentes pages */
+ #logoEtMenu, #listeDesServices, #exemplesDeProjets, #carteEtFormulaire {
+        background-color: #f5f5f5;
+        height: 100%;
+        width: 100%;
+        min-height: 980px;
+ }
+
+/* 1ère partie ; image de bienvenue avec son contenu */
+
+   
+    /* Disposition du logo et du menu sur la même ligne*/
+    header{
+        position: relative;
+        height: 150px;
+    }
+    
+    #logoduMenu img {
+        position: absolute;
+        height: 50%;
+        width : 15%;
+        margin: 35px 0 0 10%;
+    }
+
+    /* Menu */
+    #barreDeMenu {
+        height:100%;
+        width: 30%;
+        font-size: 25px;
+        float: right;
+    }
+
+    #barreDeMenu a {
+        display: inline-block;
+        text-align: center;
+        width:18%;
+        min-width: 80px;
+        line-height: 125px;
+        text-decoration: none;
+        color:grey;  
+    }    
+
+    /* Survol du menu */
+    #barreDeMenu :hover {
+        line-height: 115px;
+        color:black;
+        border-top: 5px solid #5cadd3;
+    }
+
+    /* Image de bienvenue */
+    #imageDeBienvenue{
+        position: relative;
+        background: url('images/slider/bg1.jpg');
+        background-size: cover;
+        height: 73%;
+        width: 100%;
+        
+    }
+    /*bordure en bas de l'image*/
+    #ajoutBordure{
+        position: absolute;
+        height: 100%;
+        width: 250px;
+        border-bottom: 5px solid #5cadd3;
+    }
+
+    /* Message de bienvenue */
+    #messageDeBienvenue{        
+        margin-left : 250px; 
+        color: white;
+    }
+
+    #buttonInfo{
+        border-radius: 2px;
+        height: 50px;
+        width: 125px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #5cadd3;
+        color:white;
+        border: #5cadd3;
+        box-shadow: 0 3px #4494bb;
+        
+    }
+
+
+
+/* Header de la page 2 et 3 (titre icone et paragraphe de description) */
+
+    /* Titre de la page */
+        #titre{
+            font-size: 50px;
+            text-align: center;        
+        }
+
+        /* icone sous le titre h1*/
+        .decorationSousTitre{
+            text-align: center;
+        }
+
+
+        .fa{
+            text-align: center;
+            color: #5cadd3;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+       hr{
+        width: 50px;
+        display: inline-block;
+        opacity: 0.1;
+        margin: 0 0 4px 0;
+       }
+
+
+        /* paragraphe sous le titre h1*/
+       #listeDesServices .decorationSousTitre + p, #exemplesDeProjets .decorationSousTitre + p  {
+            text-align: center;
+        }
+
+
+/* 2ème partie ; Liste des services offerts par l'agance */
+
+    /* FLEXBOX*/
+
+            /* Mise en place de l'image à gauche et des services à droite */
+            #conteneurElement{
+                display: flex;
+                justify-content: space-around;
+
+            }
+
+                .element:nth-child(1){
+                    margin-left: 12%;
+                }
+
+                .element:nth-child(2){
+                    margin: 5% 13% 0 4%;
+                }
+
+            /* Mise en forme des services verticalement */
+            #conteneurDesServices{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+            }
+                
+                .lesServices:nth-child(1){
+                    margin-bottom: 25px;
+                }
+
+                .lesServices:nth-child(2){
+                    margin-bottom: 25px;
+                }
+
+            /* Dispositions des icones et du texte des différents services*/
+             
+             #conteneurDispositionServices1,#conteneurDispositionServices2,#conteneurDispositionServices3{
+                display: flex;            
+            }
+
+                .dispositionServices1:nth-child(1),.dispositionServices2:nth-child(1),.dispositionServices3:nth-child(1){
+                    color: #5cadd3;
+                    font-size:25px;
+                    margin-top: 10px;
+                    
+                 }
+                .dispositionServices1:nth-child(2),.dispositionServices2:nth-child(2),.dispositionServices3:nth-child(2){
+                    color: #5cadd3;
+                    font-size:15px;
+                    margin: 30px 0 0 52px;                    
+                    position: absolute;
+                    background-color: #f5f5f5;
+                    border:2px solid #f5f5f5;
+                    border-radius: 1000px; 
+                }
+                .dispositionServices1:nth-child(3),.dispositionServices2:nth-child(3),.dispositionServices3:nth-child(3){
+                    margin-left: 35px;
+                }
+                
+               
+
+    /* Bordure des icones des différents services */
+    #conteneurElement .fa-line-chart, #conteneurElement .fa-cubes, #conteneurElement .fa-pie-chart{
+        border:1px solid #dbdbdb;
+        border-radius: 1000px;
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+    }
+
+    /* titre des trois articles  */
+    .titreService{
+        font-size: 23px;
+        font-weight: bold;
+        
+    }
+
+/* 3ème partie ; Exemples de projet déjà réalisés */
+    
+
+    /* Mise en forme du mini menu des différents projets*/
+    #conteneurRubriqueProjet{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        height: 50px;
+        line-height: 300%;
+        
+        
+    }
+        .rubriqueProjet:nth-child(1){
+            font-size: 20px;
+            background-color:#e5e5e5;
+            border-radius: 4px 0 0px 5px;            
+            width: 100px;
+            
+        }
+        .rubriqueProjet:nth-child(2), .rubriqueProjet:nth-child(3){
+            font-size: 20px;
+            background-color:#e5e5e5;
+            width: 100px;
+
+
+            }
+        .rubriqueProjet:nth-child(4){
+            font-size: 20px;
+            background-color:#e5e5e5;
+            border-radius: 0 2px 0 0;  
+            width: 100px;
+            }
+
+        .rubriqueProjet:nth-child(1):hover, .rubriqueProjet:nth-child(2):hover, .rubriqueProjet:nth-child(3):hover, .rubriqueProjet:nth-child(4):hover{
+            background-color:#468cad;
+            color: white;
+           
+        }
+
+
+    /* Les Projets-images mis en 2 lignes 4 colonnes */
+
+    #conteneurProjetImage{
+        display: flex;
+        justify-content:center;
+        flex-wrap: wrap;
+        margin-right: 100px;       
+    }
+        .projetImage:nth-child(1),.projetImage:nth-child(2),.projetImage:nth-child(3), .projetImage:nth-child(4),.projetImage:nth-child(5),.projetImage:nth-child(6),.projetImage:nth-child(7),.projetImage:nth-child(8){
+            width: 20%;
+            height: 0%;
+            margin : 1% 1% 1% 1%;
+        }
+
+    /* 4ème image avec sa petite présentation */
+    #conteneurProjetImage div {
+        background-image: url("images/portfolio/04.jpg");
+        background-size:cover;
+        height: auto;
+    }
+        #conteneurProjetImage aside{
+            z-index: 1;
+            margin: 42% 0 0 1px;
+            height: 37%;
+            background-color: #352a14;
+            opacity: 0.8;
+            }
+
+            #conteneurProjetImage aside p{
+                margin-left:5%;
+                color: white;
+            }
+
+            #conteneurProjetImage .fa{
+                z-index: 2;
+                position: absolute;
+                height: 40px;
+                width: 40px;
+                line-height: 38px;
+                color: white;
+                background-color: #5cadd3;
+                border: 2px solid white;
+                border-radius: 1000px;
+
+                margin: 7% 0 0 16% ;
+            }
+
+    
+       
+
+        
+    
+
+/* 4ème partie ; carte avec un formulaire de contact */
+
+    /* Mise en forme du formulaire */
+
+    #carteEtFormulaire iframe{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        margin: 0 0 0 0;
+        
+        
+    }
+    #carteEtFormulaire form{
+        position: absolute;
+        background-color: #f2f6f8;
+        height: 78%;
+        width :25%;
+        margin:4% 0 0 65%;
+        opacity: 0.9;        
+    }
+
+    #carteEtFormulaire form p {
+        margin : 5% 5% 5% 5%;
+        height: 100%;
+        font-size: 20px;
+        
+        
+    }
+
+    #carteEtFormulaire form input{
+        width: 100%;
+        height: 5.5%;
+        border:1px solid #cccccc;
+        border-radius: 5px;
+        background-color: white;
+        font-size: 20px;
+    
+    }
+    
+    #carteEtFormulaire form textarea {
+        width: 100%;
+        height: 38%;
+        background-color: white;
+        font-size: 20px;
+    }
+
+    #carteEtFormulaire form button {
+        color:white;
+        font-size: 20px;
+        background-color: #5cadd3;
+        border-bottom:4px solid #4494bb;
+        border-radius: 3px;
+        width: 35%;
+        height: 6%;
+        
+    }
+
+
+
+
