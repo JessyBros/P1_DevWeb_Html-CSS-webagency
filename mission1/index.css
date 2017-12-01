@@ -1,4 +1,4 @@
-/* NE FONCTIONNE PAS POUR L'INSTANT!!!!*/
+﻿/* NE FONCTIONNE PAS POUR L'INSTANT!!!!*/
 
 @font-face {
     font-family: 'fontawesome';
@@ -237,6 +237,7 @@ html, body{
         
     }
         .rubriqueProjet:nth-child(1){
+	    position: relative;
             font-size: 20px;
             background-color:#e5e5e5;
             border-radius: 4px 0 0px 5px;            
@@ -244,6 +245,7 @@ html, body{
             
         }
         .rubriqueProjet:nth-child(2), .rubriqueProjet:nth-child(3){
+	    position: relative;
             font-size: 20px;
             background-color:#e5e5e5;
             width: 100px;
@@ -251,6 +253,7 @@ html, body{
 
             }
         .rubriqueProjet:nth-child(4){
+	    position: relative;
             font-size: 20px;
             background-color:#e5e5e5;
             border-radius: 0 2px 0 0;  
@@ -258,10 +261,26 @@ html, body{
             }
 
         .rubriqueProjet:nth-child(1):hover, .rubriqueProjet:nth-child(2):hover, .rubriqueProjet:nth-child(3):hover, .rubriqueProjet:nth-child(4):hover{
-            background-color:#468cad;
+	    background-color:#468cad;
             color: white;
-           
+      
         }
+	.triangle{
+	    position: absolute;
+	    width: 0;
+	    bottom: -10px;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    border-style: solid;
+	    border-width: 10px 10px 0 10px;
+	    border-color: red transparent transparent transparent;
+	}  
+	
+	.triangle:hover{
+	    border-color: #468cad transparent transparent transparent;
+	}
+
+	
 
 
     /* Les Projets-images mis en 2 lignes 4 colonnes */
