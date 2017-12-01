@@ -36,37 +36,45 @@ html, body{
     /* Disposition du logo et du menu sur la même ligne*/
     header{
         position: relative;
-        height: 150px;
+        height: 110px;
     }
     
     #logoduMenu img {
         position: absolute;
-        height: 50%;
-        width : 15%;
-        margin: 35px 0 0 10%;
+        margin: 25px 0 0 10%;
     }
 
     /* Menu */
-    #barreDeMenu {
+    #conteneurBarreDeMenu {
+	display:flex;
+        text-align:center;
         height:100%;
         width: 30%;
-        font-size: 25px;
+        font-size: 16px;
         float: right;
     }
 
-    #barreDeMenu a {
-        display: inline-block;
-        text-align: center;
-        width:18%;
-        min-width: 80px;
-        line-height: 125px;
+  @media screen and (max-width: 1024px)
+{
+    #conteneurBarreDeMenu{
+        flex-direction:column;
+	width:20px;
+	height:10px;
+	
+    }
+
+}
+
+    .barreDeMenu {
+        width:17%;
+        line-height: 100px;
         text-decoration: none;
         color:grey;  
     }    
 
     /* Survol du menu */
-    #barreDeMenu :hover {
-        line-height: 115px;
+    #conteneurBarreDeMenu :hover {
+        line-height: 90px;
         color:black;
         border-top: 5px solid #5cadd3;
     }
@@ -78,19 +86,19 @@ html, body{
         background-size: cover;
         height: 73%;
         width: 100%;
-        
     }
+
     /*bordure en bas de l'image*/
     #ajoutBordure{
         position: absolute;
         height: 100%;
-        width: 250px;
+        width: 13%;
         border-bottom: 5px solid #5cadd3;
     }
 
     /* Message de bienvenue */
     #messageDeBienvenue{        
-        margin-left : 250px; 
+        margin-left : 13%; 
         color: white;
     }
 
@@ -105,6 +113,27 @@ html, body{
         border: #5cadd3;
         box-shadow: 0 3px #4494bb;
         
+    }
+
+    .fa-angle-right{
+	position:absolute;
+	top:50%;
+	left:98%;
+	width:60px;
+	height: 60px;
+	text-align:center;
+	color:white;
+	background-color:#444348 ;
+        border: 2px solid #444348;
+        border-radius: 1000px;
+    }
+
+    .fa-angle-left{
+	position:absolute;
+	top:50%;
+	left:1%;
+	font-size 15px;
+	color:white;
     }
 
 
@@ -123,7 +152,7 @@ html, body{
         }
 
 
-        .fa{
+        #listeDesServices .fa, #exemplesDeProjets .fa{
             text-align: center;
             color: #5cadd3;
             display: block;
@@ -131,7 +160,7 @@ html, body{
             margin-right: auto;
         }
 
-       hr{
+       #listeDesServices hr, #exemplesDeProjets hr{
         width: 50px;
         display: inline-block;
         opacity: 0.1;
