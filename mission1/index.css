@@ -12,8 +12,6 @@
 }
 
 
-
-
 html, body{
     margin: 0 0 0 0;
     width:100%;
@@ -34,50 +32,48 @@ html, body{
 
    
     /* Disposition du logo et du menu sur la même ligne*/
-    header{
+    #conteneurLogoEtMenu{
+	display:flex;
         position: relative;
+	justify-content: space-between;
         height: 110px;
     }
     
-    #logoduMenu img {
-        position: absolute;
-        margin: 25px 0 0 10%;
-    }
-
-    /* Menu */
-    #conteneurBarreDeMenu {
-	display:flex;
-        text-align:center;
-        height:100%;
-        width: 30%;
-        font-size: 16px;
-        float: right;
-    }
-
-  @media screen and (max-width: 1024px)
-{
-    #conteneurBarreDeMenu{
-        flex-direction:column;
-	width:20px;
-	height:10px;
+    	/* Logo */
+    	.logoEtMenu:nth-child(1){
+        	margin:30px 0 0 13%;
+    	}
 	
-    }
+    	/* Menu */
+    	#conteneurBarreDeMenu {
+		display:flex;
+		margin-right:13%;
+      	  	text-align:center;
+        	font-size: 16px; 
+    	}
 
-}
+    		.barreDeMenu {
+			flex-direction:column;
+			text-align:center;
+       			width: 85px;
+        		line-height: 100px;
+        		text-decoration: none;
+        		color:grey; 
+    		}    
 
-    .barreDeMenu {
-        width:17%;
-        line-height: 100px;
-        text-decoration: none;
-        color:grey;  
-    }    
+    		/* Survol du menu */
+    		#conteneurBarreDeMenu :hover {
+        		line-height: 90px;
+        		color:black;
+        		border-top: 5px solid #5cadd3;
+    		}
 
-    /* Survol du menu */
-    #conteneurBarreDeMenu :hover {
-        line-height: 90px;
-        color:black;
-        border-top: 5px solid #5cadd3;
-    }
+		@media screen and (max-width: 1024px)
+		{
+   			.barreDeMenu{
+       				flex-direction:column;
+    			 }
+		}
 
     /* Image de bienvenue */
     #imageDeBienvenue{
@@ -359,11 +355,6 @@ html, body{
                 margin: 7% 0 0 16% ;
             }
 
-    
-       
-
-        
-    
 
 /* 4ème partie ; carte avec un formulaire de contact */
 
@@ -374,9 +365,8 @@ html, body{
         height: 100%;
         width: 100%;
         margin: 0 0 0 0;
-        
-        
     }
+
     #carteEtFormulaire form{
         position: absolute;
         background-color: #f2f6f8;
@@ -390,8 +380,6 @@ html, body{
         margin : 5% 5% 5% 5%;
         height: 100%;
         font-size: 20px;
-        
-        
     }
 
     #carteEtFormulaire form input{
@@ -400,8 +388,7 @@ html, body{
         border:1px solid #cccccc;
         border-radius: 5px;
         background-color: white;
-        font-size: 20px;
-    
+        font-size: 20px; 
     }
     
     #carteEtFormulaire form textarea {
