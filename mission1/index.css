@@ -26,6 +26,7 @@ html, body{
         height: 100%;
         width: 100%;
         min-height: 980px;
+	overflow:hidden;
  }
 
 /* 1ère partie ; image de bienvenue avec son contenu */
@@ -49,11 +50,10 @@ html, body{
 		display:flex;
 		margin-right:13%;
       	  	text-align:center;
-        	font-size: 16px; 
+        	font-size: 18px; 
     	}
 
     		.barreDeMenu {
-			flex-direction:column;
 			text-align:center;
        			width: 85px;
         		line-height: 100px;
@@ -70,9 +70,29 @@ html, body{
 
 		@media screen and (max-width: 1024px)
 		{
-   			.barreDeMenu{
+   			#conteneurBarreDeMenu{
        				flex-direction:column;
     			 }
+			.barreDeMenu {
+				height:20%;
+				line-height: 40px;
+			}
+			#conteneurBarreDeMenu :hover {
+        			border:0;
+				line-height:40px;
+    			}
+		}
+
+		@media screen and (max-width: 480px)
+		{
+			.logoEtMenu:nth-child(1){
+        			display:none;
+    			}
+			
+				#conteneurBarreDeMenu{
+       				flex-direction:column;
+				margin-left:40%;
+    			 }	
 		}
 
     /* Image de bienvenue */
@@ -90,6 +110,7 @@ html, body{
         height: 100%;
         width: 13%;
         border-bottom: 5px solid #5cadd3;
+	
     }
 
     /* Message de bienvenue */
@@ -182,11 +203,11 @@ html, body{
             }
 
                 .element:nth-child(1){
-                    margin-left: 12%;
+                    margin-left: 11%;
                 }
 
                 .element:nth-child(2){
-                    margin: 5% 13% 0 4%;
+                    margin: 5% 14% 0 2%;
                 }
 
             /* Mise en forme des services verticalement */
@@ -298,7 +319,7 @@ html, body{
 	    transform: translateX(-50%);
 	    border-style: solid;
 	    border-width: 10px 10px 0 10px;
-	    border-color: red transparent transparent transparent;
+	    border-color: red  transparent transparent transparent;
 	}  
 	
 	.triangle:hover{
