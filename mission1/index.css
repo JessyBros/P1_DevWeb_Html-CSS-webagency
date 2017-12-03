@@ -29,7 +29,7 @@ html, body{
 	overflow:hidden;
  }
 
-/* 1ère partie ; image de bienvenue avec son contenu */
+/* 1ère partie ; image de bienvenue avec son contenu ---------------------*/
 
    
     /* Disposition du logo et du menu sur la même ligne*/
@@ -67,33 +67,6 @@ html, body{
         		color:black;
         		border-top: 5px solid #5cadd3;
     		}
-
-		@media screen and (max-width: 1024px)
-		{
-   			#conteneurBarreDeMenu{
-       				flex-direction:column;
-    			 }
-			.barreDeMenu {
-				height:20%;
-				line-height: 40px;
-			}
-			#conteneurBarreDeMenu :hover {
-        			border:0;
-				line-height:40px;
-    			}
-		}
-
-		@media screen and (max-width: 480px)
-		{
-			.logoEtMenu:nth-child(1){
-        			display:none;
-    			}
-			
-				#conteneurBarreDeMenu{
-       				flex-direction:column;
-				margin-left:40%;
-    			 }	
-		}
 
     /* Image de bienvenue */
     #imageDeBienvenue{
@@ -152,10 +125,37 @@ html, body{
 	font-size 15px;
 	color:white;
     }
+		/* RESPONSIVE */
+		@media screen and (max-width: 1024px)
+		{
+   			#conteneurBarreDeMenu{
+       				flex-direction:column;
+    			 }
+			.barreDeMenu {
+				height:20%;
+				line-height: 40px;
+			}
+			#conteneurBarreDeMenu :hover {
+        			border:0;
+				line-height:40px;
+    			}
+		}
+
+		@media screen and (max-width: 480px)
+		{
+			.logoEtMenu:nth-child(1){
+        			display:none;
+    			}
+			
+				#conteneurBarreDeMenu{
+       				flex-direction:column;
+				margin-left:40%;
+    			 }	
+		}
 
 
 
-/* Header de la page 2 et 3 (titre icone et paragraphe de description) */
+/* Header de la page 2 et 3 (titre icone et paragraphe de description)-------------------- */
 
     /* Titre de la page */
         #titre{
@@ -191,7 +191,7 @@ html, body{
         }
 
 
-/* 2ème partie ; Liste des services offerts par l'agance */
+/* 2ème partie ; Liste des services offerts par l'agance --------------------*/
 
     /* FLEXBOX*/
 
@@ -199,7 +199,7 @@ html, body{
             #conteneurElement{
                 display: flex;
                 justify-content: space-around;
-
+		margin-left:9%;
             }
 
                 .element:nth-child(1){
@@ -207,7 +207,7 @@ html, body{
                 }
 
                 .element:nth-child(2){
-                    margin: 5% 14% 0 2%;
+                    margin: 5% 7% 0 2%;
                 }
 
             /* Mise en forme des services verticalement */
@@ -269,7 +269,31 @@ html, body{
         
     }
 
-/* 3ème partie ; Exemples de projet déjà réalisés */
+
+		/* RESPONSIVE */
+
+
+		@media screen and (max-width: 1280px)
+		{
+   			#conteneurElement{
+                    		flex-direction:column;
+                	}
+			.element:nth-child(1){
+                    		margin:0;
+				text-align:center;
+				
+                	}
+                }
+		
+		@media screen and (max-width: 780px)
+		{
+   			.element:nth-child(1){
+                    		display:none;
+				
+                	}	
+		}
+
+/* 3ème partie ; Exemples de projet déjà réalisés --------------------*/
     
 
     /* Mise en forme du mini menu des différents projets*/
@@ -345,26 +369,31 @@ html, body{
 
     /* 4ème image avec sa petite présentation */
     #conteneurProjetImage div {
+	position:relative;
         background-image: url("images/portfolio/04.jpg");
         background-size:cover;
         height: auto;
     }
         #conteneurProjetImage aside{
+	    position: absolute;
             z-index: 1;
-            margin: 42% 0 0 1px;
-            height: 37%;
+            top:65%;
+            height: 35%;
+	    width:100%;
             background-color: #352a14;
             opacity: 0.8;
             }
 
             #conteneurProjetImage aside p{
-                margin-left:5%;
+		margin-left:5%;
                 color: white;
             }
 
             #conteneurProjetImage .fa{
                 z-index: 2;
                 position: absolute;
+		top:60%;
+		left:80%;
                 height: 40px;
                 width: 40px;
                 line-height: 38px;
@@ -372,12 +401,10 @@ html, body{
                 background-color: #5cadd3;
                 border: 2px solid white;
                 border-radius: 1000px;
-
-                margin: 7% 0 0 16% ;
             }
 
 
-/* 4ème partie ; carte avec un formulaire de contact */
+/* 4ème partie ; carte avec un formulaire de contact-------------------- */
 
     /* Mise en forme du formulaire */
 
