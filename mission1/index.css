@@ -290,6 +290,9 @@ html, body{
    			.element:nth-child(1){
                     		display:none;
 				
+                	}
+			.element:nth-child(2){
+                    		margin: 2% 0% 0 0%;
                 	}	
 		}
 
@@ -365,6 +368,8 @@ html, body{
             width: 20%;
             height: 0%;
             margin : 1% 1% 1% 1%;
+	    min-width: 155px;
+	    text-align:center;
         }
 
     /* 4ème image avec sa petite présentation */
@@ -378,8 +383,8 @@ html, body{
 	    position: absolute;
             z-index: 1;
             top:65%;
-            height: 35%;
-	    width:100%;
+            width:100%;
+	    height:35%;
             background-color: #352a14;
             opacity: 0.8;
             }
@@ -391,18 +396,32 @@ html, body{
 
             #conteneurProjetImage .fa{
                 z-index: 2;
+		margin : auto;
                 position: absolute;
-		top:60%;
+		top:53%;
 		left:80%;
-                height: 40px;
-                width: 40px;
-                line-height: 38px;
+                height: 22%;
+                width: 15%;
+		line-height: 60px;
                 color: white;
                 background-color: #5cadd3;
                 border: 2px solid white;
                 border-radius: 1000px;
             }
 
+
+		/* RESPONSIVE */
+
+
+		@media screen and (max-width: 1280px)
+		{
+   			#conteneurProjetImage{
+       				margin:0;      
+    			}
+			#conteneurProjetImage aside, #conteneurProjetImage .fa{
+	  			display:none;
+            		}
+                }
 
 /* 4ème partie ; carte avec un formulaire de contact-------------------- */
 
@@ -418,8 +437,10 @@ html, body{
     #carteEtFormulaire form{
         position: absolute;
         background-color: #f2f6f8;
-        height: 78%;
+        height:78%;
+	min-height: 780px;
         width :25%;
+	min-width:300px;
         margin:4% 0 0 65%;
         opacity: 0.9;        
     }
@@ -453,10 +474,32 @@ html, body{
         border-bottom:4px solid #4494bb;
         border-radius: 3px;
         width: 35%;
-        height: 6%;
+        min-height: 6%;
         
     }
 
+		/* RESPONSIVE */
 
 
+		@media screen and (max-width: 850px)
+		{
+			#carteEtFormulaire{
+				background-color:grey;
+    			}
+   			#carteEtFormulaire iframe{
+        			display:none;
+				background-color:black;
+    			}
+			#carteEtFormulaire form{
+				margin: 4% 0 0 0;
+				left:37.5%;
+   			 }
+                }
+	
+		@media screen and (max-width: 500px)
+		{
+			#carteEtFormulaire form{
+				left:16%;
+   			 }
+                }
 
