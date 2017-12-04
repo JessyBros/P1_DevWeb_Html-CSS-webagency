@@ -78,16 +78,27 @@ html, body{
     }
 
     /*bordure en bas de l'image*/
-    #ajoutBordure{
-        position: absolute;
-        height: 100%;
+    #ajoutBordureBleu{
+        position:absolute;
+	height:100%;
+	bottom:0;
         width: 13%;
         border-bottom: 5px solid #5cadd3;
-	
+    }
+
+    #ajoutBordureTransparent{  /*A FINIRRRRRRRRRRRRRRRRRRRRR*/
+        position:absolute;
+	top:100%;
+	bottom:0;
+	left:13%;
+        width: 87%;
+        border-bottom: 5px solid transparent;
+	opacity:0.5;
     }
 
     /* Message de bienvenue */
-    #messageDeBienvenue{        
+    #messageDeBienvenue{  
+	position:relative;      
         margin-left : 13%; 
         color: white;
     }
