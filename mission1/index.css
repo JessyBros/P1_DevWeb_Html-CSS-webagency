@@ -121,13 +121,14 @@ html, body{
 	position:absolute;
 	top:50%;
 	left:98%;
-	width:60px;
-	height: 60px;
+	width:80px;
+	height: 80px;
 	text-align:center;
 	color:white;
 	background-color:#444348 ;
         border: 2px solid #444348;
         border-radius: 1000px;
+	margin-bottom: 80px;
     }
 
     .fa-angle-left{
@@ -355,22 +356,23 @@ html, body{
             }
 
         .rubriqueProjet:nth-child(1):hover, .rubriqueProjet:nth-child(2):hover, .rubriqueProjet:nth-child(3):hover, .rubriqueProjet:nth-child(4):hover{
-	    background-color:#468cad;
+	    background-color:#5cadd3;
             color: white;
+	    border-bottom: 4px solid #468cad;
       
         }
 	.triangle{
 	    position: absolute;
 	    width: 0;
-	    bottom: -10px;
+	    bottom: -15px;
 	    left: 50%;
 	    transform: translateX(-50%);
 	    border-style: solid;
-	    border-width: 10px 10px 0 10px;
-	    border-color: red  transparent transparent transparent;
+	    border-width: 15px 15px 0 15px;
+	    border-color: transparent  transparent transparent transparent;
 	}  
 	
-	.triangle:hover{
+	.rubriqueProjet:hover .triangle{
 	    border-color: #468cad transparent transparent transparent;
 	}
         
@@ -378,7 +380,7 @@ html, body{
 
     #conteneurProjetImage{
         display: flex;
-        justify-content:space-around;
+        justify-content:center;
         flex-wrap:wrap;
         margin: 50px 100px 0 0;
 	height:50%;
