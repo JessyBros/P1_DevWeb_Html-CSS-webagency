@@ -244,6 +244,20 @@ html, body{
             margin-left: auto;
             margin-right: auto;
         }
+			@media screen and (max-width: 480px)
+			{
+				 #listeDesServices .decorationSousTitre + p, #exemplesDeProjets .decorationSousTitre + p  {
+            				display:none;	
+        			}
+			}
+			@media screen and (max-width: 285px)
+			{
+   				.fa-stack{
+					bottom:27px;
+	   			
+	   				left:27px;
+				}	
+			}
 
 
 /* 2ème partie ; Liste des services offerts par l'agance --------------------*/
@@ -283,19 +297,19 @@ html, body{
             /* Dispositions des icones et du texte des différents services*/
              
              #conteneurDispositionServices1,#conteneurDispositionServices2,#conteneurDispositionServices3{
-                display: flex;            
+                display: flex;           
             }
 
                 .dispositionServices1:nth-child(1),.dispositionServices2:nth-child(1),.dispositionServices3:nth-child(1){
                     color: #5cadd3;
-                    font-size:25px;
-                    margin-top: 10px;
+                    font-size:30px;
+                    margin-top: 12px;
                     
                  }
                 .dispositionServices1:nth-child(2),.dispositionServices2:nth-child(2),.dispositionServices3:nth-child(2){
                     color: #5cadd3;
-                    font-size:15px;
-                    margin: 30px 0 0 52px;                    
+                    font-size:17px;
+                    margin: 39px 0 0 68px;                    
                     position: absolute;
                     background-color: #f5f5f5;
                     border:2px solid #f5f5f5;
@@ -303,6 +317,7 @@ html, body{
                 }
                 .dispositionServices1:nth-child(3),.dispositionServices2:nth-child(3),.dispositionServices3:nth-child(3){
                     margin-left: 35px;
+		    line-height:30px;
                 }
                 
                
@@ -311,9 +326,9 @@ html, body{
     #conteneurElement .fa-line-chart, #conteneurElement .fa-cubes, #conteneurElement .fa-pie-chart{
         border:1px solid #dbdbdb;
         border-radius: 1000px;
-        height: 60px;
-        width: 60px;
-        line-height: 60px;
+        height: 75px;
+        width: 75px;
+        line-height: 75px;
     }
 
     /* titre des trois articles  */
@@ -331,6 +346,7 @@ html, body{
 		{
    			#conteneurElement{
                     		flex-direction:column;
+				margin: 3% 0 0 0;
                 	}
 			.element:nth-child(1){
                     		margin:0;
@@ -353,8 +369,15 @@ html, body{
                 	}
 			.element:nth-child(2){
                     		margin: 2% 0% 0 0%;
-                	}	
+                	}
+			#conteneurElement .fa{
+				display:none;
+			}
+			.dispositionServices1:nth-child(3),.dispositionServices2:nth-child(3),.dispositionServices3:nth-child(3){
+                    margin-left:10px;
+                }	
 		}
+		
 
 
 /* 3ème partie ; Exemples de projet déjà réalisés --------------------*/
