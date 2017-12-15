@@ -23,12 +23,14 @@ html, body{
 
 /* Format des différentes pages */
  #logoEtMenu, #listeDesServices, #exemplesDeProjets, #carteEtFormulaire {
-        background-color: #f5f5f5;
         height: 100%;
         width: 100%;
-        min-height: 1000px;
+        min-height:1000px;
 	overflow:hidden;
  }
+	#exemplesDeProjets{
+		background-color: #f5f5f5;
+	}
 
 /* 1ère partie ; image de bienvenue avec son contenu ---------------------*/
 
@@ -74,7 +76,7 @@ html, body{
         position: relative;
         background: url('images/slider/bg1.jpg');
         background-size: cover;
-        height: 73%;
+        height:700px;
         width: 100%;
     }
 
@@ -100,15 +102,16 @@ html, body{
     /* Message de bienvenue */
     #messageDeBienvenue{  
 	position:relative;      
-        margin-left : 13%; 
+        margin-left : 13%;
+	margin-right:1%; 
         color: white;
     }
 
     #buttonInfo{
         border-radius: 2px;
         height: 50px;
-        width: 125px;
-        font-size: 18px;
+        width: 150px;
+        font-size: 22px;
         font-weight: bold;
         background-color: #5cadd3;
         color:white;
@@ -119,24 +122,43 @@ html, body{
 
     .fa-angle-right{
 	position:absolute;
-	top:50%;
-	left:98%;
-	width:80px;
-	height: 80px;
-	text-align:center;
-	color:white;
-	background-color:#444348 ;
-        border: 2px solid #444348;
-        border-radius: 1000px;
-	margin-bottom: 80px;
+	top:47%;
+	right:0.5%;
+	font-size 15px;
+	color:#f4fafd;
     }
 
+    #bordureGriseRight{	
+	position:absolute;
+	top:44%;
+	left:97.5%;
+	width:10%;
+	height:12%;
+    	background-color:black ;
+        border: 2px solid black;
+        border-radius: 1000px;
+	margin-bottom: 80px;
+	opacity:0.3;
+    }
     .fa-angle-left{
 	position:absolute;
-	top:50%;
-	left:1%;
+	top:47%;
+	left:0.5%;
 	font-size 15px;
 	color:white;
+    }
+
+     #bordureGriseLeft{
+	position:absolute;
+	top:44%;
+	right:97.5%;
+	width:10%;
+	height:12%;
+    	background-color:black ;
+        border: 2px solid black;
+        border-radius: 1000px;
+	margin-bottom: 80px;
+	opacity:0.3;
     }
 		/* RESPONSIVE */
 		@media screen and (max-width: 1024px)
@@ -148,10 +170,11 @@ html, body{
 				height:20%;
 				line-height: 40px;
 			}
-			#conteneurBarreDeMenu :hover {
+			#conteneurBarreDeMenu:hover {
         			border:0;
 				line-height:40px;
     			}
+			#bordureGriseLeft, #bordureGriseRight{display:none;}
 		}
 
 		@media screen and (max-width: 480px)
@@ -172,35 +195,54 @@ html, body{
 
     /* Titre de la page */
         #titre{
-            font-size: 50px;
+            font-size: 55px;
             text-align: center;        
         }
 
         /* icone sous le titre h1*/
         .decorationSousTitre{
-            text-align: center;
+	    position:relative;
+            text-align: center;            
         }
+	
+	.fa-stack{
+	    position:absolute;
+	    right:111px;
+	}
 
+	.circleWhite{
+	    z-index:1;
+	    position:absolute;
+	    color:white;
+	}
+	 
+	.circleBlue{
+	    z-index:2;
+	    position:absolute;
+	    color:#5cadd3;   	    
+	}
 
-        #listeDesServices .fa, #exemplesDeProjets .fa{
-            text-align: center;
-            color: #5cadd3;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
 
        #listeDesServices hr, #exemplesDeProjets hr{
-        width: 50px;
+        width: 170px;
         display: inline-block;
-        opacity: 0.1;
-        margin: 0 0 4px 0;
+        opacity: 0.2;
+        margin: 0 0 4px 50px;	
        }
 
 
         /* paragraphe sous le titre h1*/
        #listeDesServices .decorationSousTitre + p, #exemplesDeProjets .decorationSousTitre + p  {
             text-align: center;
+        }
+	
+	
+        #conteneurElement .fa, #conteneurProjetImage .fa{
+            text-align: center;
+            color: #5cadd3;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
 
@@ -212,18 +254,15 @@ html, body{
             #conteneurElement{
                 display: flex;
                 justify-content: space-around;
-		margin-left:9%;
+		margin: 3% 0 0 13%;
             }
-		.element:nth-child(1){
-                    margin-left:8%;
-                }
 
 		 #conteneurElement img{
                		height:400px;
             	}	
 
                 .element:nth-child(2){
-                    margin: 5% 7% 0 4%;
+                    margin: 5% 7% 0 7%;
                 }
 
             /* Mise en forme des services verticalement */
