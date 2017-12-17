@@ -479,13 +479,17 @@ html, body{
 	    display:block;
 	   }
 
-
+	    #conteneurProjetImage aside p span{
+		font-size:22px;
+	font-weight:bold;
+            }
 
             #conteneurProjetImage aside p{
 		display:block-inline;
 		margin: 0 0 0 5%;
                 color: white;
             }
+	    
 
             #conteneurProjetImage .fa{
 		display:none;
@@ -514,8 +518,14 @@ html, body{
          			width:303px;
            			height:202px;
 			}
+
+			 #conteneurProjetImage aside p span{
+				font-size:18px;
+                		
+            		}
+
 			 #conteneurProjetImage aside p{
-				font-size:10px;
+				font-size:16px;
                 		
             		}
 
@@ -530,6 +540,15 @@ html, body{
    				#conteneurProjetImage{
        					margin:0 0 0 0;    
     				}
+				#conteneurProjetImage aside p span{
+				font-size:14px;
+                		
+            		}
+
+			 #conteneurProjetImage aside p{
+				font-size:12px;
+                		
+            		}
 				
 				
 			}
@@ -568,6 +587,15 @@ html, body{
 				opacity:0;
                 
             		}
+			#conteneurProjetImage aside p span{
+				display:none;               		
+            		}
+
+			 #conteneurProjetImage aside p{
+	 			position:absolute;
+				font-size:15px;
+                		bottom:10px;
+            		}
 		}
 
 		@media screen and (max-width: 350px)
@@ -576,6 +604,9 @@ html, body{
          			
            			height:80px;
 			}
+			#conteneurProjetImage aside p{
+	 			bottom:5px;
+            		}
 		}
 
 /* 4ème partie ; carte avec un formulaire de contact-------------------- */
@@ -647,14 +678,14 @@ html, body{
     			}
 			#carteEtFormulaire form{
 				margin: 4% 0 0 0;
-				left:37.5%;
+				left:1%;
    			 }
                 }
 	
 		@media screen and (max-width: 500px)
 		{
 			#carteEtFormulaire form{
-				left:16%;
+				
    			 }
                 }
 
