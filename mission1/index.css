@@ -587,7 +587,7 @@ html, body{
 		@media screen and (max-width: 480px){
 			
             #conteneurRubriqueProjet{
-				font-size: 16px;
+				font-size: 15px;
 			}
             
 			.projetImage:nth-child(1),.projetImage:nth-child(2),.projetImage:nth-child(3), .projetImage:nth-child(4),.projetImage:nth-child(5),.projetImage:nth-child(6),.projetImage:nth-child(7),.projetImage:nth-child(8){
