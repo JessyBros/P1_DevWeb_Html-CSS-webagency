@@ -19,7 +19,7 @@ html, body{
 }
 
 /* Format des différentes pages */
- #logoEtMenu, #listeDesServices, #exemplesDeProjets, #carteEtFormulaire {
+ #accueil, #listeDesServices, #exemplesDeProjets, #carteEtFormulaire {
         height: 100%;
         width: 100%;
         min-height:1000px;
@@ -45,26 +45,28 @@ html, body{
     	.logoEtMenu:nth-child(1){
         	margin:30px 0 0 13%;
     	}
+        
 	
     	/* Menu */
     	#conteneurBarreDeMenu {
             display:flex;
             margin-right:13%;
       	  	text-align:center;
-        	font-size: 18px; 
+        	font-size: 18px;
     	}
 
     		.barreDeMenu {
 			    text-align:center;
-       			width: 85px;
+       			width: 90px;
         		line-height: 100px;
         		text-decoration: none;
-        		color:grey; 
+        		color:grey;
+            
     		}    
 
     		/* Survol du menu */
     		#conteneurBarreDeMenu :hover {
-        		line-height: 90px;
+        		line-height: 85px;
         		color:black;
         		border-top: 5px solid #5cadd3;
     		}
@@ -89,12 +91,11 @@ html, body{
 
         #ajoutBordureTransparent{ 
             position:absolute;
-            height:100%;
+            height:5px;
             bottom:0;
             left:13%;
             width: 87%;
-            border-bottom: 5px solid transparent;
-            opacity:0,1;
+            opacity:0,5;
         }
 
         /* Message de bienvenue */
@@ -161,20 +162,25 @@ html, body{
 
 		/* RESPONSIVE */
 		@media screen and (max-width: 1024px){
-   			#conteneurBarreDeMenu{
+   			
+			
+			#conteneurBarreDeMenu{
        				flex-direction:column;
     			 }
-                
-			#conteneurBarreDeMenu:hover {
-        			border:0;
-				    line-height:40px;
-    			}
             
-                .barreDeMenu {
-                        height:20%;
-                        line-height: 40px;
-                    }
+                #conteneurBarreDeMenu :hover {
+        		border:0;
+                line-height: 26px;
+                }
+			
             
+               			 .barreDeMenu{
+                            line-height:26px;
+                   		 }
+                        
+            
+           
+				
 			#bordureGriseLeft, #bordureGriseRight{
                     display:none;
             }
