@@ -208,9 +208,12 @@ html, body{
 /* Header de la page 2 et 3 (titre icone et paragraphe de description)-------------------- */
 
     /* Titre de la page */
-        #titre{
+        .titre{
             font-size: 55px;
-            text-align: center;        
+            text-align: center;
+            font-weight: normal;
+            margin:0;
+            padding:0;
         }
 
         /* icone sous le titre h1*/
@@ -463,15 +466,11 @@ html, body{
         flex-wrap:wrap;
 	   margin-right:4%;
     }
-            
-         .projetImage:nth-child(1){background-image: url("images/portfolio/01.jpg");}
-         .projetImage:nth-child(2){background-image: url("images/portfolio/02.jpg");}
-         .projetImage:nth-child(3){background-image: url("images/portfolio/03.jpg");}
-         .projetImage:nth-child(4){background-image: url("images/portfolio/04.jpg");}
-         .projetImage:nth-child(5){background-image: url("images/portfolio/05.jpg");}
-         .projetImage:nth-child(6){background-image: url("images/portfolio/06.jpg");}
-         .projetImage:nth-child(7){background-image: url("images/portfolio/07.jpg");}
-         .projetImage:nth-child(8){background-image: url("images/portfolio/08.jpg");}
+         .projetImage img{ 
+             height: 100%;
+             width:100%;
+         }         
+         
 
          .projetImage:nth-child(1),.projetImage:nth-child(2),.projetImage:nth-child(3), .projetImage:nth-child(4),.projetImage:nth-child(5),.projetImage:nth-child(6),.projetImage:nth-child(7),.projetImage:nth-child(8){
 	        background-size:cover;
