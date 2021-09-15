@@ -40,7 +40,7 @@ html, body{
     /* Disposition du logo et du menu sur la même ligne*/
     #conteneurLogoEtMenu{
         background-color: white;
-        z-index: 1;
+        z-index: 10;
         display:flex;
         position: fixed;
 	    justify-content: space-between;
